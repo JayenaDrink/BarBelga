@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarBelga - Gestión de Voluntarios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍺 BarBelga - Gestión de Voluntarios</h1>
+            <nav>
+                <a href="index.html" class="nav-link active">Gestionar</a>
+                <a href="view.html" class="nav-link">Visualizar</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="date-selector">
+                <label for="thursday-select">Selecciona un jueves del mes:</label>
+                <select id="thursday-select">
+                    <option value="">-- Selecciona un jueves --</option>
+                </select>
+            </section>
+
+            <section id="volunteers-section" class="volunteers-section" style="display: none;">
+                <h2>Voluntarios del Bar</h2>
+                <div id="volunteers-container">
+                    <!-- Los voluntarios se agregarán aquí dinámicamente -->
+                </div>
+                <button type="button" id="add-volunteer-btn" class="btn btn-secondary">
+                    + Agregar Voluntario
+                </button>
+                <div class="actions">
+                    <button type="button" id="save-btn" class="btn btn-primary">
+                        Guardar
+                    </button>
+                    <button type="button" id="clear-btn" class="btn btn-danger">
+                        Limpiar
+                    </button>
+                </div>
+            </section>
+
+            <div id="message" class="message"></div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

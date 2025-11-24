@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarBelga - Visualización</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍺 BarBelga - Visualización de Voluntarios</h1>
+            <nav>
+                <a href="index.html" class="nav-link">Gestionar</a>
+                <a href="view.html" class="nav-link active">Visualizar</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="filter-section">
+                <label for="month-filter">Filtrar por mes:</label>
+                <select id="month-filter">
+                    <option value="all">Todos los meses</option>
+                </select>
+            </section>
+
+            <section id="schedule-section" class="schedule-section">
+                <div id="schedule-container">
+                    <p class="empty-message">No hay voluntarios registrados aún.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="view.js"></script>
+</body>
+</html>
+
