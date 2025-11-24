@@ -9,23 +9,32 @@
 <body>
     <div class="container">
         <header>
-            <h1>🍺 BarBelga - Gestión de Voluntarios</h1>
+            <div class="header-top">
+                <h1 id="page-title">🍺 BarBelga - Gestión de Voluntarios</h1>
+                <div class="language-switcher">
+                    <button class="flag-btn" id="lang-es" title="Español">
+                        <span class="flag-icon">🇪🇸</span>
+                    </button>
+                    <button class="flag-btn" id="lang-nl" title="Nederlands">
+                        <span class="flag-icon">🇧🇪</span>
+                    </button>
+                </div>
+            </div>
             <nav>
-                <a href="index.html" class="nav-link active">Gestionar</a>
-                <a href="view.html" class="nav-link">Visualizar</a>
+                <a href="index.html" class="nav-link active" id="nav-manage">Gestionar</a>
+                <a href="view.html" class="nav-link" id="nav-view">Visualizar</a>
             </nav>
         </header>
 
         <main>
             <section class="date-selector">
-                <label for="thursday-select">Selecciona un jueves del mes:</label>
-                <select id="thursday-select">
-                    <option value="">-- Selecciona un jueves --</option>
-                </select>
+                <label id="label-select-thursday">Selecciona un jueves:</label>
+                <div id="calendar-container" class="calendar-container"></div>
+                <input type="hidden" id="selected-date" value="">
             </section>
 
             <section id="volunteers-section" class="volunteers-section" style="display: none;">
-                <h2>Voluntarios del Bar</h2>
+                <h2 id="volunteers-title">Voluntarios del Bar</h2>
                 <div id="volunteers-container">
                     <!-- Los voluntarios se agregarán aquí dinámicamente -->
                 </div>
@@ -46,6 +55,7 @@
         </main>
     </div>
 
+    <script src="translations.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

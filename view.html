@@ -9,29 +9,40 @@
 <body>
     <div class="container">
         <header>
-            <h1>🍺 BarBelga - Visualización de Voluntarios</h1>
+            <div class="header-top">
+                <h1 id="page-title">🍺 BarBelga - Visualización de Voluntarios</h1>
+                <div class="language-switcher">
+                    <button class="flag-btn" id="lang-es" title="Español">
+                        <span class="flag-icon">🇪🇸</span>
+                    </button>
+                    <button class="flag-btn" id="lang-nl" title="Nederlands">
+                        <span class="flag-icon">🇧🇪</span>
+                    </button>
+                </div>
+            </div>
             <nav>
-                <a href="index.html" class="nav-link">Gestionar</a>
-                <a href="view.html" class="nav-link active">Visualizar</a>
+                <a href="index.html" class="nav-link" id="nav-manage">Gestionar</a>
+                <a href="view.html" class="nav-link active" id="nav-view">Visualizar</a>
             </nav>
         </header>
 
         <main>
             <section class="filter-section">
-                <label for="month-filter">Filtrar por mes:</label>
+                <label for="month-filter" id="label-filter-month">Filtrar por mes:</label>
                 <select id="month-filter">
-                    <option value="all">Todos los meses</option>
+                    <option value="all" id="option-all-months">Todos los meses</option>
                 </select>
             </section>
 
             <section id="schedule-section" class="schedule-section">
                 <div id="schedule-container">
-                    <p class="empty-message">No hay voluntarios registrados aún.</p>
+                    <p class="empty-message" id="empty-message">No hay voluntarios registrados aún.</p>
                 </div>
             </section>
         </main>
     </div>
 
+    <script src="translations.js"></script>
     <script src="view.js"></script>
 </body>
 </html>
